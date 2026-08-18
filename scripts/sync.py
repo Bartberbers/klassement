@@ -61,9 +61,10 @@ def fetch(athlete: dict, oldest: date, newest: date) -> list[dict]:
     return r.json()
 
 
-def slim(activity: dict, athlete_name: str) -> dict:
+def slim(activity: dict, athlete: dict) -> dict:
     out = {k: activity.get(k) for k in FIELDS}
-    out["athlete"] = athlete_name
+    out["athlete"] = athlete["name"]
+    out["athlete_id"] = athlete["athlete_id"]
     # Handmatig ingevoerde activiteiten gooien we niet weg, we markeren ze --
     # build.py telt ze wel mee maar de site laat zien welk deel handmatig is.
     # source is altijd gevuld (GARMIN_CONNECT / UPLOAD / MANUAL / STRAVA / ...),
@@ -84,6 +85,19 @@ def main() -> None:
     if STORE.exists():
         store = {a["id"]: a for a in json.loads(STORE.read_text(encoding="utf-8"))}
 
+    # Namen uit een vorige ronde bijtrekken. Nodig voor activiteiten van voor we
+    # athlete_id gingen opslaan -- die kan de hernoeming hieronder niet vinden.
+    aliases = cfg.get("athlete_aliases", {})
+    if aliases:
+        fixed = 0
+        for stored in store.values():
+            new = aliases.get(stored.get("athlete"))
+            if new:
+                stored["athlete"] = new
+                fixed += 1
+        if fixed:
+            print(f"{fixed} activiteiten hernoemd via athlete_aliases.")
+
     print(f"Sync {oldest} t/m {newest} voor {len(athletes)} atleten.\n")
 
     unmapped: Counter = Counter()
@@ -96,11 +110,17 @@ def main() -> None:
             print(f"  {athlete['name']}: MISLUKT -- {exc}")
             continue
 
+        # Hernoem je iemand in ATHLETES_JSON, dan moeten ook zijn oude activiteiten
+        # mee. Anders verschijnt hij als twee atleten in het klassement.
+        for stored in store.values():
+            if stored.get("athlete_id") == athlete["athlete_id"]:
+                stored["athlete"] = athlete["name"]
+
         with_load = 0
         for raw in activities:
             if not raw.get("id"):
                 continue
-            slimmed = slim(raw, athlete["name"])
+            slimmed = slim(raw, athlete)
             store[slimmed["id"]] = slimmed
             if slimmed.get("icu_training_load"):
                 with_load += 1
