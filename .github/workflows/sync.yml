@@ -1,0 +1,37 @@
+name: Sync klassement
+
+on:
+  schedule:
+    - cron: "17 5,9,13,17,21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Ophalen bij intervals.icu
+        env:
+          ATHLETES_JSON: ${{ secrets.ATHLETES_JSON }}
+        run: python scripts/sync.py
+
+      - name: Klassement uitrekenen
+        run: python scripts/build.py
+
+      - name: Wijzigingen committen
+        run: |
+          git config user.name "klassement-bot"
+          git config user.email "actions@github.com"
+          git add data/activities.json public/data.json public/history.json
+          git diff --staged --quiet || git commit -m "Sync $(date -u +%F)"
+          git push
