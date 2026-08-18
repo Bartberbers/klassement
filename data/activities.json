@@ -2664,6 +2664,18 @@
   "manual": false
  },
  {
+  "id": "i170741227",
+  "type": "Rowing",
+  "start_date_local": "2026-07-30T11:34:06",
+  "distance": 16073.07,
+  "moving_time": 5170,
+  "icu_training_load": 95,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i176372430",
   "type": "Run",
   "start_date_local": "2026-07-30T17:45:01",
@@ -2673,6 +2685,18 @@
   "source": "OAUTH_CLIENT",
   "name": "Run",
   "athlete": "Sam",
+  "manual": false
+ },
+ {
+  "id": "i170848121",
+  "type": "Ride",
+  "start_date_local": "2026-07-30T17:46:43",
+  "distance": 39494.07,
+  "moving_time": 4381,
+  "icu_training_load": 59,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
   "manual": false
  },
  {
@@ -2688,6 +2712,18 @@
   "manual": false
  },
  {
+  "id": "i171107362",
+  "type": "Rowing",
+  "start_date_local": "2026-07-31T13:59:04",
+  "distance": 14045.81,
+  "moving_time": 4636,
+  "icu_training_load": 67,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i176372551",
   "type": "WeightTraining",
   "start_date_local": "2026-08-01T09:35:20",
@@ -2697,6 +2733,18 @@
   "source": "OAUTH_CLIENT",
   "name": "Functional Strength Training",
   "athlete": "Sam",
+  "manual": false
+ },
+ {
+  "id": "i171434934",
+  "type": "Ride",
+  "start_date_local": "2026-08-01T14:13:15",
+  "distance": 25291.81,
+  "moving_time": 3475,
+  "icu_training_load": 52,
+  "source": "GARMIN_CONNECT",
+  "name": "Saint-Julien-du-Serre Wegwielrennen",
+  "athlete": "Mees",
   "manual": false
  },
  {
@@ -2748,6 +2796,30 @@
   "manual": false
  },
  {
+  "id": "i171682530",
+  "type": "Ride",
+  "start_date_local": "2026-08-02T11:36:41",
+  "distance": 38004.36,
+  "moving_time": 4771,
+  "icu_training_load": 84,
+  "source": "GARMIN_CONNECT",
+  "name": "Saint-Julien-du-Serre Wegwielrennen",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
+  "id": "i172007254",
+  "type": "Ride",
+  "start_date_local": "2026-08-03T12:15:00",
+  "distance": 31191.05,
+  "moving_time": 4375,
+  "icu_training_load": 55,
+  "source": "GARMIN_CONNECT",
+  "name": "Saint-Julien-du-Serre Wegwielrennen",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i172009817",
   "type": "Ride",
   "start_date_local": "2026-08-03T12:15:23",
@@ -2784,6 +2856,18 @@
   "manual": false
  },
  {
+  "id": "i172372457",
+  "type": "Kayaking",
+  "start_date_local": "2026-08-04T11:23:57",
+  "distance": 15013.7,
+  "moving_time": 9535,
+  "icu_training_load": 46,
+  "source": "GARMIN_CONNECT",
+  "name": "Balazuc Kajakken",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i172372516",
   "type": "Kayaking",
   "start_date_local": "2026-08-04T11:24:10",
@@ -2793,6 +2877,18 @@
   "source": "GARMIN_CONNECT",
   "name": "Balazuc Kajakken",
   "athlete": "Lelijkert Toon",
+  "manual": false
+ },
+ {
+  "id": "i172689145",
+  "type": "Ride",
+  "start_date_local": "2026-08-05T09:05:48",
+  "distance": 65536.09,
+  "moving_time": 10423,
+  "icu_training_load": 208,
+  "source": "GARMIN_CONNECT",
+  "name": "Saint-Pierre-de-Vassols Wegwielrennen",
+  "athlete": "Mees",
   "manual": false
  },
  {
@@ -2832,6 +2928,18 @@
   "manual": false
  },
  {
+  "id": "i173036975",
+  "type": "Ride",
+  "start_date_local": "2026-08-06T09:54:04",
+  "distance": 75655.47,
+  "moving_time": 9810,
+  "icu_training_load": 107,
+  "source": "GARMIN_CONNECT",
+  "name": "Saint-Julien-du-Serre Wegwielrennen",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i173049773",
   "type": "Ride",
   "start_date_local": "2026-08-06T10:10:43",
@@ -2865,6 +2973,18 @@
   "source": "OAUTH_CLIENT",
   "name": "HIIT",
   "athlete": "Sam",
+  "manual": false
+ },
+ {
+  "id": "i173415990",
+  "type": "Ride",
+  "start_date_local": "2026-08-07T11:11:22",
+  "distance": 68820.66,
+  "moving_time": 8203,
+  "icu_training_load": 106,
+  "source": "GARMIN_CONNECT",
+  "name": "Le Teil Wegwielrennen",
+  "athlete": "Mees",
   "manual": false
  },
  {
@@ -2916,6 +3036,42 @@
   "manual": false
  },
  {
+  "id": "i173985030",
+  "type": "Rowing",
+  "start_date_local": "2026-08-09T11:36:53",
+  "distance": 2098.63,
+  "moving_time": 754,
+  "icu_training_load": 10,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
+  "id": "i174038372",
+  "type": "Rowing",
+  "start_date_local": "2026-08-09T14:43:58",
+  "distance": 1512.31,
+  "moving_time": 626,
+  "icu_training_load": 9,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
+  "id": "i174065120",
+  "type": "Rowing",
+  "start_date_local": "2026-08-09T15:40:07",
+  "distance": 1982.34,
+  "moving_time": 829,
+  "icu_training_load": 15,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i176372518",
   "type": "WeightTraining",
   "start_date_local": "2026-08-10T07:29:29",
@@ -2949,6 +3105,18 @@
   "source": "OAUTH_CLIENT",
   "name": "Run",
   "athlete": "Sam",
+  "manual": false
+ },
+ {
+  "id": "i174707939",
+  "type": "Rowing",
+  "start_date_local": "2026-08-11T11:34:59",
+  "distance": 16397.63,
+  "moving_time": 5358,
+  "icu_training_load": 70,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
   "manual": false
  },
  {
@@ -2988,6 +3156,18 @@
   "manual": false
  },
  {
+  "id": "i175062410",
+  "type": "Rowing",
+  "start_date_local": "2026-08-12T10:07:35",
+  "distance": 14130.43,
+  "moving_time": 4574,
+  "icu_training_load": 54,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i175215862",
   "type": "WeightTraining",
   "start_date_local": "2026-08-12T18:10:51",
@@ -3012,6 +3192,18 @@
   "manual": false
  },
  {
+  "id": "i175444257",
+  "type": "WeightTraining",
+  "start_date_local": "2026-08-13T13:27:10",
+  "distance": null,
+  "moving_time": 3849,
+  "icu_training_load": 24,
+  "source": "GARMIN_CONNECT",
+  "name": "Kracht",
+  "athlete": "Mees",
+  "manual": false
+ },
+ {
   "id": "i175498315",
   "type": "Ride",
   "start_date_local": "2026-08-13T17:17:17",
@@ -3033,6 +3225,18 @@
   "source": "OAUTH_CLIENT",
   "name": "Functional Strength Training",
   "athlete": "Sam",
+  "manual": false
+ },
+ {
+  "id": "i175819904",
+  "type": "Ride",
+  "start_date_local": "2026-08-14T08:09:07",
+  "distance": 215114.31,
+  "moving_time": 25021,
+  "icu_training_load": 324,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
   "manual": false
  },
  {
@@ -3069,6 +3273,18 @@
   "source": "GARMIN_CONNECT",
   "name": "Krachtsport",
   "athlete": "Lelijkert Toon",
+  "manual": false
+ },
+ {
+  "id": "i176454171",
+  "type": "Ride",
+  "start_date_local": "2026-08-16T11:37:17",
+  "distance": 56205.7,
+  "moving_time": 7138,
+  "icu_training_load": 98,
+  "source": "GARMIN_CONNECT",
+  "name": "Arnhem Wegwielrennen",
+  "athlete": "Mees",
   "manual": false
  },
  {
