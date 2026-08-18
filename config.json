@@ -42,5 +42,8 @@
     "min_activities": 3,
     "max_weeks": 26,
     "max_months": 24
-  }
+  },
+  "athlete_aliases": {
+  "Homo Toon": "Lelijkert Toon"
+}
 }
