@@ -1,0 +1,46 @@
+{
+  "_comment": "Weging aanpassen kan altijd zonder opnieuw te syncen: draai scripts/build.py. LET OP: de hall of fame wordt met deze officiele weging vastgezet, dus een wijziging herschrijft ook de geschiedenis.",
+  "sync_lookback_days": 21,
+  "blend_load_pct": 50,
+  "sport_factors": {
+    "Rowing": 0.85,
+    "VirtualRow": 0.0,
+    "Ride": 0.4,
+    "VirtualRide": 0.4,
+    "GravelRide": 0.4,
+    "MountainBikeRide": 0.5,
+    "Run": 1.0,
+    "VirtualRun": 1.0,
+    "TrailRun": 1.1,
+    "Swim": 3.5,
+    "Kayaking": 0.85,
+    "Walk": 0.0,
+    "Hike": 0.0,
+    "WeightTraining": 0.0,
+    "OpenWaterSwim": 3.5,
+    "AlpineSki": 0.0,
+    "Transition": 0.0,
+    "Workout": 0.0,
+    "HighIntensityIntervalTraining": 0.0
+  },
+  "sport_labels": {
+    "Rowing": "Roeien",
+    "VirtualRow": "Erg",
+    "Ride": "Fietsen",
+    "VirtualRide": "Fietsen",
+    "GravelRide": "Fietsen",
+    "MountainBikeRide": "Fietsen",
+    "Run": "Hardlopen",
+    "VirtualRun": "Hardlopen",
+    "TrailRun": "Hardlopen",
+    "Swim": "Zwemmen",
+    "Kayaking": "Kajak",
+    "OpenWaterSwim": "Zwemmen",
+    "HighIntensityIntervalTraining": "Intervaltraining"
+  },
+  "hall_of_fame": {
+    "min_activities": 3,
+    "max_weeks": 26,
+    "max_months": 24
+  }
+}

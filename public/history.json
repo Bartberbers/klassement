@@ -1,0 +1,239 @@
+{
+ "generated_at": "2026-08-18T12:02",
+ "weeks": [
+  {
+   "label": "Week 33",
+   "sub": "10 – 16 augustus",
+   "start": "2026-08-10",
+   "end": "2026-08-16",
+   "winner": "Homo Toon",
+   "score": 96.3,
+   "eq_km": 32.8,
+   "margin": 0.5,
+   "runner_up": "Sam"
+  },
+  {
+   "label": "Week 32",
+   "sub": "3 – 9 augustus",
+   "start": "2026-08-03",
+   "end": "2026-08-09",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 108.8,
+   "margin": 69.4,
+   "runner_up": "Sam"
+  },
+  {
+   "label": "Week 31",
+   "sub": "27 – 2 augustus",
+   "start": "2026-07-27",
+   "end": "2026-08-02",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 65.3,
+   "margin": 67.7,
+   "runner_up": "Sam"
+  },
+  {
+   "label": "Week 28",
+   "sub": "6 – 12 juli",
+   "start": "2026-07-06",
+   "end": "2026-07-12",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 19.4,
+   "margin": 75.2,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 27",
+   "sub": "29 – 5 juli",
+   "start": "2026-06-29",
+   "end": "2026-07-05",
+   "winner": "Bart",
+   "score": 100.0,
+   "eq_km": 56.4,
+   "margin": 12.6,
+   "runner_up": "Homo Toon"
+  },
+  {
+   "label": "Week 26",
+   "sub": "22 – 28 juni",
+   "start": "2026-06-22",
+   "end": "2026-06-28",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 68.4,
+   "margin": 3.7,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 25",
+   "sub": "15 – 21 juni",
+   "start": "2026-06-15",
+   "end": "2026-06-21",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 78.9,
+   "margin": 22.1,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 24",
+   "sub": "8 – 14 juni",
+   "start": "2026-06-08",
+   "end": "2026-06-14",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 119.1,
+   "margin": 13.5,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 23",
+   "sub": "1 – 7 juni",
+   "start": "2026-06-01",
+   "end": "2026-06-07",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 98.3,
+   "margin": 31.3,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 22",
+   "sub": "25 – 31 mei",
+   "start": "2026-05-25",
+   "end": "2026-05-31",
+   "winner": "Homo Toon",
+   "score": 99.1,
+   "eq_km": 86.2,
+   "margin": 9.6,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 21",
+   "sub": "18 – 24 mei",
+   "start": "2026-05-18",
+   "end": "2026-05-24",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 147.3,
+   "margin": 34.5,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 20",
+   "sub": "11 – 17 mei",
+   "start": "2026-05-11",
+   "end": "2026-05-17",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 87.0,
+   "margin": 20.8,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 19",
+   "sub": "4 – 10 mei",
+   "start": "2026-05-04",
+   "end": "2026-05-10",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 119.3,
+   "margin": 30.4,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 18",
+   "sub": "27 – 3 mei",
+   "start": "2026-04-27",
+   "end": "2026-05-03",
+   "winner": "Bart",
+   "score": 100.0,
+   "eq_km": 96.0,
+   "margin": 25.8,
+   "runner_up": "Homo Toon"
+  },
+  {
+   "label": "Week 17",
+   "sub": "20 – 26 april",
+   "start": "2026-04-20",
+   "end": "2026-04-26",
+   "winner": "Homo Toon",
+   "score": 99.9,
+   "eq_km": 115.2,
+   "margin": 4.8,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Week 16",
+   "sub": "13 – 19 april",
+   "start": "2026-04-13",
+   "end": "2026-04-19",
+   "winner": "Bart",
+   "score": 100.0,
+   "eq_km": 31.3,
+   "margin": null,
+   "runner_up": null
+  }
+ ],
+ "months": [
+  {
+   "label": "Juli",
+   "sub": "2026",
+   "start": "2026-07-01",
+   "end": "2026-07-31",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 167.9,
+   "margin": 79.7,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Juni",
+   "sub": "2026",
+   "start": "2026-06-01",
+   "end": "2026-06-30",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 379.6,
+   "margin": 15.5,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "Mei",
+   "sub": "2026",
+   "start": "2026-05-01",
+   "end": "2026-05-31",
+   "winner": "Homo Toon",
+   "score": 100.0,
+   "eq_km": 466.2,
+   "margin": 21.1,
+   "runner_up": "Bart"
+  },
+  {
+   "label": "April",
+   "sub": "2026",
+   "start": "2026-04-01",
+   "end": "2026-04-30",
+   "winner": "Bart",
+   "score": 100.0,
+   "eq_km": 197.4,
+   "margin": 20.8,
+   "runner_up": "Homo Toon"
+  }
+ ],
+ "crowns": [
+  {
+   "name": "Homo Toon",
+   "weeks": 13,
+   "months": 3
+  },
+  {
+   "name": "Bart",
+   "weeks": 3,
+   "months": 1
+  }
+ ]
+}

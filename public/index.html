@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kilometerklassement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* daglicht op de baan: bleke lucht boven, echt water in de banen */
+  --bg:#E7EDEE; --surface:#FFFFFF; --raise:#F1F6F7;
+  --line:#CBD8DB; --line-2:#A6BEC4;
+  --ink:#13272C; --mute:#3E5A61; --dim:#4F6A71;
+  --brass:#7A5C15; --brass-dim:#A6873C; --gold:#E8B94A;
+  --accent:#1B6A85; --rank:#6F8D95;
+  --w1:#37809A; --w2:#1E607B; --w3:#134B60;
+  /* kielzogkleuren: helder genoeg voor blauw water, met randje op de legenda */
+  --t1:#F5B335; --t2:#E8624A; --t3:#63D9BE; --t4:#A48BE0; --t5:#FFFFFF;
+  --hull:#FBFCF9; --oar:#F2F7F8;
+  --row:72px;
+  --gutter:186px;   /* breedte van de uitslagkolom; startlijn ligt hier */
+  --pad:32px;       /* speling tussen boot en baanrand, in px zodat de romp nooit knipt */
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:15px;line-height:1.6;
+  padding:clamp(24px,5vw,64px) clamp(16px,5vw,40px) 80px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px;margin:0 auto}
+
+.rise{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rise.in{opacity:1;transform:none}
+
+header{border-bottom:1px solid var(--line-2);padding-bottom:20px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--dim);margin:0 0 10px}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:600;
+  font-size:clamp(44px,10vw,84px);line-height:.9;letter-spacing:-.015em;
+  margin:0;text-transform:uppercase}
+h1 span{display:block;color:var(--brass)}
+.lede{color:var(--mute);font-size:14px;margin:14px 0 0;max-width:48ch}
+
+.rail{display:flex;gap:0;margin:26px 0 0;border-bottom:1px solid var(--line);
+  overflow-x:auto;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.pill{appearance:none;background:none;border:0;border-bottom:2px solid transparent;
+  font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--dim);
+  padding:10px 18px 12px;cursor:pointer;margin-bottom:-1px;white-space:nowrap;
+  transition:color .25s var(--ease),border-color .25s var(--ease)}
+.pill:hover{color:var(--ink)}
+.pill[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--brass)}
+.pill:focus-visible{outline:2px solid var(--accent);outline-offset:-4px}
+
+.strip{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  color:var(--dim);letter-spacing:.08em;margin:16px 0 10px}
+
+/* ─── de baan ─────────────────────────────────────────────────────── */
+.axis{display:flex;justify-content:space-between;margin-left:var(--gutter);
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);padding:0 2px 6px}
+.axis .fin{color:var(--brass)}
+
+#board{position:relative;background:var(--surface);transition:height .5s var(--ease);border-radius:3px;
+  overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.6),
+    inset 0 0 0 1px rgba(19,39,44,.10),0 10px 26px rgba(19,39,44,.13)}
+/* startlijn en finish lopen door over alle banen heen */
+#board::before,#board::after{content:"";position:absolute;top:0;bottom:0;
+  pointer-events:none;z-index:3}
+#board::before{left:var(--gutter);width:2px;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,.85) 0 6px,transparent 6px 12px)}
+#board::after{right:0;width:10px;
+  background:repeating-conic-gradient(#FFFFFF 0% 25%,#C0392B 0% 50%) 0 0/10px 10px;
+  box-shadow:-1px 0 0 rgba(19,39,44,.25)}
+#board.bare{border:0}
+#board.bare::before,#board.bare::after{display:none}
+
+.lane{position:absolute;left:0;right:0;height:var(--row);display:flex;
+  transition:transform .75s var(--ease),opacity .4s var(--ease)}
+.gutter{width:var(--gutter);flex:none;display:flex;align-items:center;gap:11px;
+  padding:0 16px 0 14px;background:var(--surface)}
+.pos{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:600;
+  line-height:1;color:var(--rank);width:24px;text-align:right;flex:none;
+  transition:color .4s var(--ease)}
+.lane[data-rank="1"] .pos{color:var(--brass)}
+.who{font-weight:500;font-size:16px;letter-spacing:-.01em;line-height:1.2}
+.nums{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;
+  font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.pts{color:var(--mute);margin-left:9px}
+.unit{font-size:9px;color:var(--dim);letter-spacing:.06em;margin-left:3px}
+.lane[data-rank="1"] .km{color:var(--brass)}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--dim);
+  letter-spacing:.04em;margin-top:2px;white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis}
+.meta .warn{color:var(--brass)}
+
+.water{position:relative;flex:1;overflow:hidden;
+  background:
+    linear-gradient(178deg,rgba(255,255,255,.16),rgba(255,255,255,0) 42%,rgba(0,0,0,.14)),
+    linear-gradient(90deg,var(--w3),var(--w1) 45%,var(--w2))}
+/* twee rimpellagen op verschillend tempo, anders leest het als een streepjespatroon */
+.water::before{content:"";position:absolute;left:-4%;right:-4%;top:-14px;bottom:-14px;
+  background:
+    repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.075) 7px 9px),
+    repeating-linear-gradient(4deg,transparent 0 15px,rgba(255,255,255,.05) 15px 18px);
+  animation:swell 6s linear infinite}
+@keyframes swell{to{transform:translateY(-9px)}}
+/* boeienlijn tussen de banen: witte drijvers aan een kabel */
+.water::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;z-index:2;
+  background-image:radial-gradient(circle at 2.5px 2.5px,#FBFEFE 1.9px,rgba(19,39,44,.28) 2.3px,transparent 2.6px);
+  background-size:17px 5px}
+
+.wake{position:absolute;left:0;top:50%;transform:translateY(-50%);height:9px;
+  display:flex;overflow:hidden;
+  width:calc(var(--pad) + (100% - var(--pad)*2) * var(--p));
+  transition:width .75s var(--ease);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 26%);
+          mask-image:linear-gradient(90deg,transparent,#000 26%)}
+.seg{height:100%;transition:width .55s var(--ease)}
+
+.boat{position:absolute;top:50%;z-index:2;
+  left:calc(var(--pad) + (100% - var(--pad)*2) * var(--p));
+  transform:translate(-50%,-50%);
+  transition:left .75s var(--ease)}
+.boat svg{display:block;animation:bob var(--bob,3.4s) ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(-1.4px) rotate(-.7deg)}
+               to{transform:translateY(1.4px) rotate(.7deg)}}
+.shell{fill:var(--hull);stroke:#0C2A33;stroke-width:.9;
+  filter:drop-shadow(0 1px 1px rgba(6,32,40,.45))}
+.deck{stroke:#0C2A33;stroke-width:.7;opacity:.3}
+.rower{fill:#0C2A33;opacity:.7}
+.oar path{stroke:var(--oar);stroke-width:1.6;stroke-linecap:round;fill:none}
+.oar ellipse{fill:var(--oar);stroke:#0C2A33;stroke-width:.5}
+.oar{transform-box:view-box;transform-origin:27px 20px}
+.oarA{animation:oarA var(--sp,2.6s) ease-in-out infinite alternate}
+.oarB{animation:oarB var(--sp,2.6s) ease-in-out infinite alternate}
+@keyframes oarA{from{transform:rotate(-13deg)}to{transform:rotate(13deg)}}
+@keyframes oarB{from{transform:rotate(13deg)}to{transform:rotate(-13deg)}}
+.lane[data-rank="1"] .shell{fill:var(--gold)}
+.lane[data-rank="1"] .oar ellipse{fill:var(--gold)}
+
+.gap{position:absolute;top:50%;right:calc(100% + 9px);transform:translateY(-50%);
+  font-family:"IBM Plex Mono",monospace;font-size:10px;color:rgba(255,255,255,.82);
+  letter-spacing:.04em;white-space:nowrap;font-variant-numeric:tabular-nums;
+  text-shadow:0 1px 2px rgba(6,32,40,.6)}
+.boat.ahead .gap{right:auto;left:calc(100% + 9px)}
+.lane[data-rank="1"] .gap{color:var(--gold)}
+
+/* ─── replay ──────────────────────────────────────────────────────── */
+.replay{display:flex;align-items:center;gap:14px;margin:16px 0 0;
+  padding-left:calc(var(--gutter) - 46px)}
+.play{appearance:none;flex:none;width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--brass);background:none;color:var(--brass);
+  cursor:pointer;display:grid;place-items:center;padding:0;
+  transition:background .2s var(--ease),transform .2s var(--ease)}
+.play:hover{background:rgba(201,165,92,.12);transform:scale(1.06)}
+.play:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.play svg{width:13px;height:13px;fill:currentColor}
+#scrub{flex:1;min-width:80px}
+.rdate{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim);
+  letter-spacing:.08em;min-width:92px;text-align:right;flex:none}
+
+.key{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin:22px 0 0;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim);letter-spacing:.05em}
+.key span{display:flex;align-items:center;gap:7px}
+.key .kl{color:var(--dim);letter-spacing:.14em;text-transform:uppercase}
+.sw{width:10px;height:10px;display:inline-block;border-radius:1px;
+  box-shadow:inset 0 0 0 1px rgba(19,39,44,.28)}
+
+.panel{margin:40px 0 0;background:var(--surface);border:1px solid var(--line);
+  border-radius:3px;padding:20px 22px 22px}
+.panel h2{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:500;
+  text-transform:uppercase;letter-spacing:.05em;margin:0 0 4px}
+.panel p{font-size:13px;color:var(--mute);margin:0 0 18px}
+.knobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:14px 26px}
+.knob{display:flex;align-items:center;gap:11px}
+.knob label{font-size:13px;color:var(--mute);min-width:66px}
+.knob output{font-family:"IBM Plex Mono",monospace;font-size:12px;min-width:32px;
+  text-align:right;color:var(--ink)}
+input[type=range]{appearance:none;flex:1;height:3px;background:var(--line-2);
+  border-radius:2px;outline:none}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:15px;height:15px;
+  border-radius:50%;background:var(--accent);cursor:pointer;border:0;
+  transition:transform .15s var(--ease)}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.25)}
+input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;
+  background:var(--accent);cursor:pointer;border:0}
+input[type=range]:focus-visible{box-shadow:0 0 0 3px rgba(27,106,133,.28)}
+.blendrow{margin:22px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+.reset{appearance:none;background:none;border:1px solid var(--line-2);color:var(--mute);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;padding:7px 14px;border-radius:2px;cursor:pointer;
+  margin:18px 0 0;transition:color .2s,border-color .2s}
+.reset:hover{color:var(--ink);border-color:var(--mute)}
+.dirty{color:var(--brass);font-size:12px;margin:14px 0 0;opacity:0;
+  transition:opacity .3s var(--ease)}
+.dirty.on{opacity:1}
+
+/* ─── erebord ─────────────────────────────────────────────────────── */
+.hof{margin:64px 0 0;padding:38px clamp(20px,4vw,44px) 42px;border-radius:5px;
+  border:1px solid #15100A;
+  background:
+    repeating-linear-gradient(93deg,rgba(0,0,0,.20) 0 2px,transparent 2px 7px,
+      rgba(255,235,200,.022) 7px 9px,transparent 9px 19px),
+    linear-gradient(176deg,#3C2C1C,#2B1E13 52%,#20160D);
+  box-shadow:inset 0 0 0 1px rgba(201,165,92,.20),inset 0 3px 26px rgba(0,0,0,.55),
+    0 20px 44px rgba(0,0,0,.38)}
+.hof h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;
+  font-size:clamp(34px,6vw,52px);letter-spacing:.01em;margin:0;line-height:1;
+  color:#DDBE74;text-shadow:0 1px 0 #150E07,0 -1px 0 rgba(255,232,186,.13)}
+.hof .lede{color:#9A8461;margin-bottom:28px;font-size:13px}
+.crowns{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;
+  margin:0 0 34px}
+.crown{background:rgba(0,0,0,.20);border:1px solid rgba(201,165,92,.20);border-radius:3px;
+  padding:16px 18px;transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.crown:hover{border-color:rgba(201,165,92,.42);transform:translateY(-2px)}
+.crown.first{border-color:rgba(221,190,116,.55);background:rgba(201,165,92,.07)}
+.crown .nm{font-family:"Cormorant Garamond",Georgia,serif;font-size:29px;font-weight:600;
+  line-height:1.1;margin:0 0 6px;color:#E8D3A2;
+  text-shadow:0 1px 0 #150E07,0 -1px 0 rgba(255,232,186,.10)}
+.crown.first .nm{color:#F2DDA9}
+.crown .ct{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#8B7550;
+  letter-spacing:.08em;margin:0}
+
+.hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px}
+.hcol h3{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.22em;
+  text-transform:uppercase;color:#8B7550;font-weight:400;margin:0 0 14px;
+  padding-bottom:10px;border-bottom:1px solid rgba(201,165,92,.20)}
+.entry{display:grid;grid-template-columns:76px 1fr auto;gap:12px;align-items:baseline;
+  padding:11px 0;border-bottom:1px solid rgba(201,165,92,.11);font-size:14px}
+.entry:last-child{border-bottom:0}
+.entry .when{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#8B7550;
+  letter-spacing:.04em}
+.entry .win{font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;font-weight:600;
+  color:#E8D3A2;line-height:1.15}
+.entry .win small{display:block;font-weight:400;font-size:10px;color:#8B7550;
+  font-family:"IBM Plex Mono",monospace;letter-spacing:.03em;line-height:1.5}
+.entry .gapn{font-family:"IBM Plex Mono",monospace;font-size:10px;color:#8B7550;
+  font-variant-numeric:tabular-nums}
+.more{appearance:none;background:none;border:0;color:#A78D5E;cursor:pointer;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;padding:14px 0 0}
+.more:hover{color:#E8D3A2}
+.hof .empty{color:#8B7550}
+
+footer{margin:52px 0 0;padding-top:18px;border-top:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--dim);letter-spacing:.05em}
+.empty{padding:44px 0;color:var(--mute)}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important;
+    animation-iteration-count:1!important}
+  html{scroll-behavior:auto}
+  .rise{opacity:1;transform:none}
+}
+@media (max-width:640px){
+  :root{--gutter:126px;--pad:24px;--row:82px}
+  .pos{font-size:24px;width:18px}
+  .gutter{gap:8px;padding-right:11px}
+  .who{font-size:14px}
+  .nums{font-size:12px}
+  .pts{display:block;margin-left:0}   /* naast elkaar past niet in 100px */
+  .meta{display:none}                 /* details staan in de tooltip op de boot */
+  .boat svg{width:44px;height:29px}   /* anders klipt de achtersteven op de startlijn */
+  .replay{padding-left:0}
+  .rdate{min-width:74px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="rise">
+  <p class="eyebrow">Intervals.icu · vriendengroep</p>
+  <h1>Kilometer<span>klassement</span></h1>
+  <p class="lede">Elke sport omgerekend naar dezelfde eenheid, gemengd met training load. Schuif aan de factoren en kijk wie er inhaalt.</p>
+</header>
+
+<div class="rail" role="tablist" id="rail"></div>
+<p class="strip"><span id="window"></span><span id="blendtxt"></span></p>
+
+<div class="axis"><span id="axL"></span><span class="fin" id="axR"></span></div>
+<div id="board"></div>
+
+<div class="replay">
+  <button class="play" id="play" aria-label="Speel het seizoen af">
+    <svg viewBox="0 0 12 12" aria-hidden="true"><path id="picon" d="M2 1 L11 6 L2 11 Z"/></svg>
+  </button>
+  <input type="range" id="scrub" min="0" max="1" value="1" step="1" aria-label="Schuif door de tijd">
+  <span class="rdate" id="rdate">nu</span>
+</div>
+
+<div class="key" id="key"></div>
+
+<section class="panel rise" id="panel">
+  <h2>Wat als</h2>
+  <p>Alleen voor jou, in deze browser. Het erebord blijft op de officiële weging staan.
+     Ergometer en krachttraining leveren geen afstand en tellen alleen via load.</p>
+  <div class="knobs" id="knobs"></div>
+  <div class="blendrow">
+    <div class="knob">
+      <label for="blend">Afstand ↔ load</label>
+      <input type="range" id="blend" min="0" max="100" step="5" value="50">
+      <output id="blendout">50%</output>
+    </div>
+  </div>
+  <p class="dirty" id="dirty">Je kijkt naar je eigen weging, niet naar de officiële.</p>
+  <button class="reset" id="reset">Terug naar officieel</button>
+</section>
+
+<section class="hof rise" id="hof">
+  <h2>Erelijst</h2>
+  <p class="lede">Vastgezet op de officiële weging, zodra een week of maand dicht is.</p>
+  <div class="crowns" id="crowns"></div>
+  <div class="hgrid">
+    <div class="hcol"><h3>Maanden</h3><div id="months"></div></div>
+    <div class="hcol"><h3>Weken</h3><div id="weeks"></div></div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<script>
+const TINTS=["--t1","--t2","--t3","--t4","--t5"];
+const PERIODS=[
+  {key:"week",  label:"Week",   days:"isoweek"},
+  {key:"month", label:"Maand",  days:"calmonth"},
+  {key:"year",  label:"Jaar",   days:"calyear"},
+  {key:"all",   label:"Altijd", days:"all"}
+];
+const NL=["januari","februari","maart","april","mei","juni","juli","augustus",
+          "september","oktober","november","december"];
+const KORT=["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
+
+let DATA=null, HIST=null, factors={}, blend=50, active=0, palette={}, lanes=new Map();
+let showAllWeeks=false, showAllMonths=false;
+// replay: rIdx null betekent live, anders een index in rDays
+let rDays=[], rIdx=null, playing=false;
+
+const iso=d=>d.toISOString().slice(0,10);
+const dagNL=s=>`${+s.slice(8,10)} ${KORT[+s.slice(5,7)-1]}`;
+
+function windowFor(key){
+  const now=new Date();
+  if(key==="week"){
+    const dow=(now.getDay()+6)%7;
+    const mon=new Date(now); mon.setDate(now.getDate()-dow);
+    return [iso(mon),iso(now)];
+  }
+  if(key==="month") return [iso(new Date(now.getFullYear(),now.getMonth(),1)),iso(now)];
+  if(key==="year")  return [iso(new Date(now.getFullYear(),0,1)),iso(now)];
+  return ["0000-01-01",iso(now)];
+}
+
+/* cutoff: tel alleen mee tot en met die dag (replay).
+   absolute: normaliseer op de eindstand van de periode in plaats van op de
+   huidige koploper, zodat de boten tijdens een replay ook echt vooruit varen. */
+function compute(cutoff,absolute){
+  const [from,to]=windowFor(PERIODS[active].key);
+  const end=cutoff||to;
+  const labels=DATA.canonical.labels, b=blend/100;
+  const acc={};
+  for(const [who,day,sport,km,load,n,manual] of DATA.rows){
+    if(day<from||day>to) continue;
+    const a=acc[who]??(acc[who]={eq:0,load:0,n:0,manual:0,sports:{},eqT:0,loadT:0});
+    const eq=km*(factors[sport]??0);
+    a.eqT+=eq; a.loadT+=load;
+    if(day>end) continue;
+    a.eq+=eq; a.load+=load; a.n+=n; a.manual+=manual;
+    if(eq>0){const L=labels[sport]??sport; a.sports[L]=(a.sports[L]||0)+eq;}
+  }
+  const rows=Object.entries(acc).map(([name,a])=>({name,...a}));
+  if(!rows.length) return [];
+  const topEq=Math.max(...rows.map(r=>absolute?r.eqT:r.eq))||1;
+  const topLd=Math.max(...rows.map(r=>absolute?r.loadT:r.load))||1;
+  rows.forEach(r=>r.score=(r.eq/topEq)*100*(1-b)+(r.load/topLd)*100*b);
+  rows.sort((x,y)=>y.score-x.score||x.name.localeCompare(y.name));
+  rows.forEach((r,i)=>r.rank=i+1);
+  return rows;
+}
+
+function countTo(el,to,dec,instant){
+  if(instant){el.textContent=to.toFixed(dec);el.dataset.v=to;return;}
+  const from=parseFloat(el.dataset.v||"0");
+  if(Math.abs(to-from)<0.05){el.textContent=to.toFixed(dec);el.dataset.v=to;return;}
+  el.dataset.v=to;
+  const t0=performance.now(), dur=450;
+  (function step(t){
+    const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+    el.textContent=(from+(to-from)*e).toFixed(dec);
+    if(p<1) requestAnimationFrame(step);
+  })(performance.now());
+}
+
+const BOAT=`<svg viewBox="0 0 62 40" width="56" height="36" aria-hidden="true">
+  <g class="oar oarA"><path d="M27 20 L21 6"/><ellipse cx="20" cy="4.4" rx="3.1" ry="1.7"/></g>
+  <g class="oar oarB"><path d="M27 20 L21 34"/><ellipse cx="20" cy="35.6" rx="3.1" ry="1.7"/></g>
+  <path class="shell" d="M5 20 C16 14.6, 40 13.6, 57 20 C40 26.4, 16 25.4, 5 20 Z"/>
+  <path class="deck" d="M15 20 H47"/>
+  <circle class="rower" cx="26" cy="20" r="2.5"/>
+</svg>`;
+
+function buildLane(name){
+  const el=document.createElement("div");
+  el.className="lane";
+  // elke roeier haalt in zijn eigen tempo, anders loopt de hele vloot gelijk
+  const sp=(2.2+Math.random()*1.1).toFixed(2), bob=(3+Math.random()*1.4).toFixed(2);
+  el.innerHTML=`<div class="gutter">
+      <div class="pos"></div>
+      <div>
+        <div class="who">${name}</div>
+        <div class="nums"><span class="km"></span><span class="unit">eq. km</span
+          ><span class="pts"></span><span class="unit">pt</span></div>
+        <div class="meta"></div>
+      </div>
+    </div>
+    <div class="water">
+      <i class="wake"></i>
+      <div class="boat" style="--sp:${sp}s;--bob:${bob}s">
+        <span class="gap"></span>${BOAT}
+      </div>
+    </div>`;
+  el.style.opacity="0";
+  document.getElementById("board").appendChild(el);
+  requestAnimationFrame(()=>{el.style.opacity="1"});
+  return el;
+}
+
+function renderBoard(){
+  const replaying = rIdx!=null;
+  const rows=compute(replaying?rDays[rIdx]:null, replaying);
+  const board=document.getElementById("board");
+  const [from,to]=windowFor(PERIODS[active].key);
+  document.getElementById("window").textContent=
+    PERIODS[active].key==="all" ? "Alle tijden" : `${from} — ${to}`;
+  document.getElementById("blendtxt").textContent=
+    `${100-blend}% afstand · ${blend}% load`;
+  document.getElementById("rdate").textContent=replaying?dagNL(rDays[rIdx]):"nu";
+
+  if(!rows.length){
+    lanes.forEach(el=>el.remove()); lanes.clear();
+    board.classList.add("bare");
+    board.style.height="150px";
+    board.innerHTML='<p class="empty">Nog niemand op het water in deze periode.</p>';
+    document.getElementById("key").innerHTML="";
+    document.getElementById("axL").textContent="";
+    document.getElementById("axR").textContent="";
+    return;
+  }
+  if(board.querySelector(".empty")){board.innerHTML="";board.classList.remove("bare")}
+
+  const rowH=parseInt(getComputedStyle(document.documentElement)
+    .getPropertyValue("--row"));
+  const lead=rows[0].score, last=rows[rows.length-1].score;
+  const span=lead-last;
+  // ingezoomd: de laatste ligt op de startlijn. tijdens de replay absoluut,
+  // zodat het veld van start naar finish vaart.
+  const posOf=s=>replaying ? s/100
+                : (span>0.01 ? (s-last)/span : 0.92);
+
+  document.getElementById("axL").textContent=
+    replaying?"start · 0 pt":`start · ${last.toFixed(0)} pt`;
+  document.getElementById("axR").textContent=`finish · ${lead.toFixed(0)} pt`;
+
+  const seen=new Set();
+  rows.forEach(r=>{
+    seen.add(r.name);
+    let el=lanes.get(r.name);
+    if(!el){el=buildLane(r.name); lanes.set(r.name,el);}
+    el.style.transform=`translateY(${(r.rank-1)*rowH}px)`;
+    el.dataset.rank=r.rank;
+    el.querySelector(".pos").textContent=r.rank;
+    countTo(el.querySelector(".km"),r.eq,0,playing);
+    countTo(el.querySelector(".pts"),r.score,1,playing);
+
+    const p=Math.max(0,Math.min(1,posOf(r.score)));
+    const boat=el.querySelector(".boat");
+    boat.style.setProperty("--p",p.toFixed(4));
+    el.querySelector(".wake").style.setProperty("--p",p.toFixed(4));
+    boat.classList.toggle("ahead",p<0.28);
+    boat.querySelector(".gap").textContent=
+      r.rank===1?"koploper":"−"+(lead-r.score).toFixed(1);
+
+    const parts=Object.entries(r.sports).sort((a,c)=>c[1]-a[1]);
+    const total=parts.reduce((a,c)=>a+c[1],0)||1;
+    el.querySelector(".wake").innerHTML=parts.map(([s,v])=>
+      `<i class="seg" style="width:${(v/total)*100}%;background:var(${palette[s]})"></i>`).join("");
+    boat.title=`${r.name} · ${r.eq.toFixed(0)} eq. km · load ${Math.round(r.load)}`+
+      (parts.length?`\n${parts.map(([s,v])=>s+" "+v.toFixed(0)).join(" · ")}`:"");
+    el.querySelector(".meta").innerHTML=
+      `load ${Math.round(r.load)} · ${r.n}&times;`+
+      (r.manual>0?` · <span class="warn">${r.manual.toFixed(0)} km handm.</span>`:"");
+  });
+
+  lanes.forEach((el,name)=>{
+    if(!seen.has(name)){el.style.opacity="0";
+      setTimeout(()=>{el.remove();lanes.delete(name)},400);}
+  });
+  board.style.height=(rows.length*rowH)+"px";
+
+  const used=new Set(); rows.forEach(r=>Object.keys(r.sports).forEach(s=>used.add(s)));
+  document.getElementById("key").innerHTML='<span class="kl">Kielzog</span>'+
+    [...used].map(s=>`<span><i class="sw" style="background:var(${palette[s]})"></i>${s}</span>`).join("");
+}
+
+/* ─── replay ─────────────────────────────────────────────────────── */
+function rebuildDays(){
+  const [from,to]=windowFor(PERIODS[active].key);
+  const set=new Set();
+  DATA.rows.forEach(r=>{if(r[1]>=from&&r[1]<=to) set.add(r[1])});
+  rDays=[...set].sort();
+  rIdx=null; playing=false; setIcon();
+  const s=document.getElementById("scrub");
+  s.max=Math.max(1,rDays.length); s.value=s.max;
+  s.disabled=rDays.length<2;
+}
+function setIcon(){
+  document.getElementById("picon").setAttribute("d",
+    playing?"M2 1 H5 V11 H2 Z M7 1 H10 V11 H7 Z":"M2 1 L11 6 L2 11 Z");
+  document.getElementById("play").setAttribute("aria-label",
+    playing?"Pauzeer":"Speel het seizoen af");
+}
+function syncScrub(){
+  document.getElementById("scrub").value=rIdx==null?rDays.length:rIdx;
+}
+function play(){
+  if(rDays.length<2) return;
+  playing=true; setIcon();
+  const start=(rIdx==null||rIdx>=rDays.length-1)?0:rIdx;
+  const dur=Math.min(16000,Math.max(5000,(rDays.length-start)*55));
+  const t0=performance.now();
+  (function step(t){
+    if(!playing) return;
+    const p=Math.min(1,(t-t0)/dur);
+    const i=start+Math.round((rDays.length-1-start)*p);
+    if(i!==rIdx){rIdx=i; syncScrub(); renderBoard();}
+    if(p<1) requestAnimationFrame(step);
+    else{
+      playing=false; setIcon();
+      // even laten staan op de eindstand, dan terug naar de ingezoomde baan
+      setTimeout(()=>{if(!playing&&rIdx!=null){rIdx=null;syncScrub();renderBoard()}},1200);
+    }
+  })(performance.now());
+}
+
+function renderRail(){
+  document.getElementById("rail").innerHTML=PERIODS.map((p,i)=>
+    `<button class="pill" role="tab" aria-selected="${i===active}" data-i="${i}">${p.label}</button>`).join("");
+  document.querySelectorAll(".pill").forEach(b=>b.onclick=()=>{
+    active=+b.dataset.i; renderRail(); rebuildDays(); renderBoard();
+  });
+}
+
+function renderKnobs(){
+  const labels=DATA.canonical.labels, canon=DATA.canonical.factors;
+  const groups={};
+  for(const sport in canon){
+    const L=labels[sport]??sport;
+    (groups[L]??=[]).push(sport);
+  }
+  // alleen sporten met echte kilometers krijgen een schuif. de ergometer levert
+  // geen afstand, die telt via load en heeft dus niets om aan te draaien.
+  const active_=Object.entries(groups).filter(([L,ss])=>
+    DATA.rows.some(r=>ss.includes(r[2])&&r[3]>0));
+  document.getElementById("knobs").innerHTML=active_.map(([L,ss])=>
+    `<div class="knob"><label for="k-${L}">${L}</label>
+     <input type="range" id="k-${L}" data-sports='${JSON.stringify(ss)}'
+       min="0" max="4" step="0.05" value="${factors[ss[0]]}">
+     <output id="ko-${L}">${(+factors[ss[0]]).toFixed(2)}</output></div>`).join("");
+
+  document.querySelectorAll("#knobs input").forEach(inp=>inp.oninput=()=>{
+    const ss=JSON.parse(inp.dataset.sports), v=parseFloat(inp.value);
+    ss.forEach(s=>factors[s]=v);
+    document.getElementById("ko-"+inp.id.slice(2)).textContent=v.toFixed(2);
+    flagDirty(); renderBoard();
+  });
+}
+
+function flagDirty(){
+  const canon=DATA.canonical;
+  const off=blend!==canon.blend_load_pct ||
+    Object.keys(canon.factors).some(s=>factors[s]!==canon.factors[s]);
+  document.getElementById("dirty").classList.toggle("on",off);
+}
+
+function resetWeights(){
+  factors={...DATA.canonical.factors};
+  blend=DATA.canonical.blend_load_pct;
+  document.getElementById("blend").value=blend;
+  document.getElementById("blendout").textContent=blend+"%";
+  renderKnobs(); flagDirty(); renderBoard();
+}
+
+function entry(e){
+  const gap=e.margin!=null?`+${e.margin.toFixed(1)}`:"—";
+  return `<div class="entry"><span class="when">${e.label}<br>${e.sub}</span>
+    <span class="win">${e.winner}${e.runner_up?`<small>voor ${e.runner_up}</small>`:""}</span>
+    <span class="gapn">${gap}</span></div>`;
+}
+
+function renderHof(){
+  if(!HIST){document.getElementById("hof").style.display="none";return;}
+  const c=HIST.crowns||[];
+  document.getElementById("crowns").innerHTML=c.slice(0,4).map((x,i)=>
+    `<div class="crown${i===0?" first":""}"><p class="nm">${x.name}</p>
+     <p class="ct">${x.months}&times; maand · ${x.weeks}&times; week</p></div>`).join("")
+    || '<p class="empty">Nog geen afgeronde periodes.</p>';
+
+  const m=HIST.months||[], w=HIST.weeks||[];
+  const mShow=showAllMonths?m:m.slice(0,6), wShow=showAllWeeks?w:w.slice(0,6);
+  document.getElementById("months").innerHTML=
+    (mShow.map(entry).join("")||'<p class="empty">Nog niets.</p>')+
+    (m.length>6?`<button class="more" id="mm">${showAllMonths?"Minder":"Alle "+m.length}</button>`:"");
+  document.getElementById("weeks").innerHTML=
+    (wShow.map(entry).join("")||'<p class="empty">Nog niets.</p>')+
+    (w.length>6?`<button class="more" id="ww">${showAllWeeks?"Minder":"Alle "+w.length}</button>`:"");
+  const mm=document.getElementById("mm"), ww=document.getElementById("ww");
+  if(mm) mm.onclick=()=>{showAllMonths=!showAllMonths;renderHof()};
+  if(ww) ww.onclick=()=>{showAllWeeks=!showAllWeeks;renderHof()};
+}
+
+function reveal(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}
+  }),{threshold:.12});
+  document.querySelectorAll(".rise").forEach(el=>io.observe(el));
+}
+
+Promise.all([
+  fetch("data.json?t="+Date.now()).then(r=>r.json()),
+  fetch("history.json?t="+Date.now()).then(r=>r.json()).catch(()=>null)
+]).then(([d,h])=>{
+  DATA=d; HIST=h;
+  const seen=[];
+  d.rows.forEach(r=>{const L=d.canonical.labels[r[2]]??r[2];
+    if(!seen.includes(L)) seen.push(L)});
+  seen.forEach((s,i)=>palette[s]=TINTS[i%TINTS.length]);
+
+  factors={...d.canonical.factors};
+  blend=d.canonical.blend_load_pct;
+  document.getElementById("blend").value=blend;
+  document.getElementById("blendout").textContent=blend+"%";
+  document.getElementById("blend").oninput=e=>{
+    blend=+e.target.value;
+    document.getElementById("blendout").textContent=blend+"%";
+    flagDirty(); renderBoard();
+  };
+  document.getElementById("reset").onclick=resetWeights;
+  document.getElementById("play").onclick=()=>{
+    if(playing){playing=false; setIcon();} else play();
+  };
+  document.getElementById("scrub").oninput=e=>{
+    playing=false; setIcon();
+    const v=+e.target.value;
+    rIdx = v>=rDays.length ? null : v;
+    renderBoard();
+  };
+
+  renderRail(); renderKnobs(); rebuildDays(); renderBoard(); renderHof(); reveal();
+  const t=new Date(d.generated_at);
+  document.getElementById("foot").textContent=
+    `Bijgewerkt ${t.getDate()} ${NL[t.getMonth()]} om ${String(t.getHours()).padStart(2,"0")}:${String(t.getMinutes()).padStart(2,"0")} · ${d.athletes.length} atleten`;
+}).catch(()=>{
+  document.getElementById("board").classList.add("bare");
+  document.getElementById("board").innerHTML=
+    '<p class="empty">data.json kon niet geladen worden. Draai scripts/build.py.</p>';
+});
+</script>
+</body>
+</html>
