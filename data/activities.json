@@ -6914,5 +6914,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i177659257",
+  "type": "HighIntensityIntervalTraining",
+  "start_date_local": "2026-08-19T18:49:21",
+  "distance": null,
+  "moving_time": 2870,
+  "icu_training_load": 46,
+  "source": "GARMIN_CONNECT",
+  "name": "HIIT",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
