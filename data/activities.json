@@ -6940,5 +6940,44 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i177953906",
+  "type": "Ride",
+  "start_date_local": "2026-08-20T10:32:54",
+  "distance": 109632.51,
+  "moving_time": 13627,
+  "icu_training_load": 235,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i177921758",
+  "type": "Rowing",
+  "start_date_local": "2026-08-20T10:39:44",
+  "distance": 13173.57,
+  "moving_time": 3890,
+  "icu_training_load": 46,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i177950285",
+  "type": "WeightTraining",
+  "start_date_local": "2026-08-20T14:37:44",
+  "distance": null,
+  "moving_time": 2581,
+  "icu_training_load": 15,
+  "source": "GARMIN_CONNECT",
+  "name": "Upper",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
