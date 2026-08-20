@@ -6916,6 +6916,19 @@
   "manual": false
  },
  {
+  "id": "i177823598",
+  "type": "WeightTraining",
+  "start_date_local": "2026-08-19T16:56:32",
+  "distance": null,
+  "moving_time": 3310,
+  "icu_training_load": 15,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
   "id": "i177659257",
   "type": "HighIntensityIntervalTraining",
   "start_date_local": "2026-08-19T18:49:21",
