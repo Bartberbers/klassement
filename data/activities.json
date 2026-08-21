@@ -6979,5 +6979,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i178321114",
+  "type": "Ride",
+  "start_date_local": "2026-08-21T15:16:13",
+  "distance": 39976.93,
+  "moving_time": 5279,
+  "icu_training_load": 79,
+  "source": "GARMIN_CONNECT",
+  "name": "Bergen Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
