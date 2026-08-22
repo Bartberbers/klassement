@@ -7005,5 +7005,18 @@
   "athlete": "Mart",
   "athlete_id": "i419272",
   "manual": false
+ },
+ {
+  "id": "i178575508",
+  "type": "Tennis",
+  "start_date_local": "2026-08-22T11:39:08",
+  "distance": 5340.07,
+  "moving_time": 5012,
+  "icu_training_load": 58,
+  "source": "GARMIN_CONNECT",
+  "name": "Gooise Meren Tennis",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
