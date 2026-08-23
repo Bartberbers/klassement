@@ -7018,5 +7018,31 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i178833849",
+  "type": "Run",
+  "start_date_local": "2026-08-23T10:30:54",
+  "distance": 16627.04,
+  "moving_time": 5070,
+  "icu_training_load": 82,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Hardlopen",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i178847220",
+  "type": "Run",
+  "start_date_local": "2026-08-23T11:22:08",
+  "distance": 10101.9,
+  "moving_time": 3480,
+  "icu_training_load": 51,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
