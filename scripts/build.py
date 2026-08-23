@@ -1,11 +1,11 @@
 """Bouw de twee bestanden die de site inleest.
 
-  public/data.json     Per atleet, per dag, per sport: afstand en load. De site
+  docs/data.json     Per atleet, per dag, per sport: afstand en load. De site
                        rekent hier zelf de scores mee uit, zodat bezoekers aan
                        de factoren kunnen schuiven. Bevat geen trainingsnamen
                        en geen activiteit-IDs -- dit bestand staat publiek.
 
-  public/history.json  De hall of fame. Winnaars van afgeronde weken en maanden,
+  docs/history.json  De hall of fame. Winnaars van afgeronde weken en maanden,
                        vastgezet met de OFFICIELE weging uit config.json. Loopt
                        dus niet mee met de sliders van de bezoeker.
 
@@ -19,8 +19,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 STORE = ROOT / "data" / "activities.json"
-OUT_DATA = ROOT / "public" / "data.json"
-OUT_HIST = ROOT / "public" / "history.json"
+OUT_DATA = ROOT / "docs" / "data.json"
+OUT_HIST = ROOT / "docs" / "history.json"
 
 MONTHS_NL = ["januari", "februari", "maart", "april", "mei", "juni", "juli",
              "augustus", "september", "oktober", "november", "december"]
