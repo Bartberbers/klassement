@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-08-23T21:39",
+ "generated_at": "2026-08-24T05:56",
  "weeks": [
+  {
+   "label": "Week 34",
+   "sub": "17 – 23 augustus",
+   "start": "2026-08-17",
+   "end": "2026-08-23",
+   "winner": "Lelijkert Toon",
+   "score": 100.0,
+   "eq_km": 68.4,
+   "margin": 53.8,
+   "runner_up": "Sam"
+  },
   {
    "label": "Week 33",
    "sub": "10 – 16 augustus",
@@ -254,7 +265,7 @@
   },
   {
    "name": "Lelijkert Toon",
-   "weeks": 7,
+   "weeks": 8,
    "months": 1
   },
   {
