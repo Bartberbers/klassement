@@ -7226,5 +7226,31 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i179989249",
+  "type": "WeightTraining",
+  "start_date_local": "2026-08-26T12:38:07",
+  "distance": null,
+  "moving_time": 2485,
+  "icu_training_load": 17,
+  "source": "GARMIN_CONNECT",
+  "name": "Kracht",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
+ },
+ {
+  "id": "i180048441",
+  "type": "Run",
+  "start_date_local": "2026-08-26T15:04:32",
+  "distance": 11003.36,
+  "moving_time": 3279,
+  "icu_training_load": 47,
+  "source": "GARMIN_CONNECT",
+  "name": "Coevorden Hardlopen",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
