@@ -7200,5 +7200,31 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i179918414",
+  "type": "Run",
+  "start_date_local": "2026-08-26T08:43:19",
+  "distance": 7010.18,
+  "moving_time": 2386,
+  "icu_training_load": 35,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
+ },
+ {
+  "id": "i179955471",
+  "type": "VirtualRow",
+  "start_date_local": "2026-08-26T10:11:45",
+  "distance": null,
+  "moving_time": 4618,
+  "icu_training_load": 87,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
