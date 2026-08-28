@@ -7291,5 +7291,18 @@
   "athlete": "Mart",
   "athlete_id": "i419272",
   "manual": false
+ },
+ {
+  "id": "i180464390",
+  "type": "WeightTraining",
+  "start_date_local": "2026-08-27T19:32:05",
+  "distance": null,
+  "moving_time": 4125,
+  "icu_training_load": 31,
+  "source": "GARMIN_CONNECT",
+  "name": "Full body",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
