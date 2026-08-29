@@ -7369,5 +7369,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i180996977",
+  "type": "Run",
+  "start_date_local": "2026-08-29T14:45:39",
+  "distance": 5629.92,
+  "moving_time": 1946,
+  "icu_training_load": 37,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Hardlopen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
