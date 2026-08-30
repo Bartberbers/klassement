@@ -7395,5 +7395,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i181288182",
+  "type": "Rowing",
+  "start_date_local": "2026-08-30T11:12:27",
+  "distance": 15545.42,
+  "moving_time": 4869,
+  "icu_training_load": 69,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
