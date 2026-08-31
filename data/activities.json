@@ -7408,5 +7408,18 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i181646329",
+  "type": "VirtualRow",
+  "start_date_local": "2026-08-31T10:34:32",
+  "distance": null,
+  "moving_time": 4804,
+  "icu_training_load": 103,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
