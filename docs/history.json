@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-31T19:31",
+ "generated_at": "2026-09-01T00:39",
  "weeks": [
   {
    "label": "Week 35",
@@ -224,6 +224,17 @@
  ],
  "months": [
   {
+   "label": "Augustus",
+   "sub": "2026",
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "winner": "Mees",
+   "score": 100.0,
+   "eq_km": 348.4,
+   "margin": 18.2,
+   "runner_up": "Mart"
+  },
+  {
    "label": "Juli",
    "sub": "2026",
    "start": "2026-07-01",
@@ -272,7 +283,7 @@
   {
    "name": "Mees",
    "weeks": 8,
-   "months": 3
+   "months": 4
   },
   {
    "name": "Lelijkert Toon",
