@@ -7512,5 +7512,18 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i182182285",
+  "type": "Ride",
+  "start_date_local": "2026-09-01T18:18:45",
+  "distance": 42904.09,
+  "moving_time": 4831,
+  "icu_training_load": 47,
+  "source": "GARMIN_CONNECT",
+  "name": "Lochem Wegwielrennen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
