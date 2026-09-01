@@ -7460,5 +7460,31 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i181934671",
+  "type": "WeightTraining",
+  "start_date_local": "2026-09-01T06:49:41",
+  "distance": null,
+  "moving_time": 3440,
+  "icu_training_load": 18,
+  "source": "GARMIN_CONNECT",
+  "name": "Full body",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i182003163",
+  "type": "Run",
+  "start_date_local": "2026-09-01T11:06:23",
+  "distance": 6200.48,
+  "moving_time": 2165,
+  "icu_training_load": 30,
+  "source": "GARMIN_CONNECT",
+  "name": "Lochem Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
