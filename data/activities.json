@@ -7551,5 +7551,18 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i182559514",
+  "type": "VirtualRow",
+  "start_date_local": "2026-09-02T18:06:42",
+  "distance": null,
+  "moving_time": 4285,
+  "icu_training_load": 117,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
