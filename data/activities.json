@@ -7538,5 +7538,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i182500272",
+  "type": "VirtualRow",
+  "start_date_local": "2026-09-02T15:14:13",
+  "distance": null,
+  "moving_time": 5713,
+  "icu_training_load": 143,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
