@@ -7655,5 +7655,31 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i183514382",
+  "type": "Rowing",
+  "start_date_local": "2026-09-05T09:08:13",
+  "distance": 20514.55,
+  "moving_time": 6245,
+  "icu_training_load": 69,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Roeien",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i183512177",
+  "type": "Rowing",
+  "start_date_local": "2026-09-05T09:34:45",
+  "distance": 16130.62,
+  "moving_time": 5169,
+  "icu_training_load": 102,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
