@@ -7863,5 +7863,44 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i184434835",
+  "type": "Run",
+  "start_date_local": "2026-09-08T06:45:41",
+  "distance": 13148.13,
+  "moving_time": 4342,
+  "icu_training_load": 61,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Hardlopen",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i184479814",
+  "type": "Rowing",
+  "start_date_local": "2026-09-08T08:06:53",
+  "distance": 20148.84,
+  "moving_time": 6299,
+  "icu_training_load": 97,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i184481260",
+  "type": "Rowing",
+  "start_date_local": "2026-09-08T08:08:19",
+  "distance": 20111.69,
+  "moving_time": 6277,
+  "icu_training_load": 57,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
