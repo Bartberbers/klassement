@@ -8084,5 +8084,57 @@
   "athlete": "Mart",
   "athlete_id": "i419272",
   "manual": false
+ },
+ {
+  "id": "i185869687",
+  "type": "Rowing",
+  "start_date_local": "2026-09-12T11:06:47",
+  "distance": 20021.23,
+  "moving_time": 6265,
+  "icu_training_load": 89,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i185875793",
+  "type": "Rowing",
+  "start_date_local": "2026-09-12T11:08:15",
+  "distance": 19867.63,
+  "moving_time": 6156,
+  "icu_training_load": 135,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i185899220",
+  "type": "WeightTraining",
+  "start_date_local": "2026-09-12T14:30:49",
+  "distance": null,
+  "moving_time": 2874,
+  "icu_training_load": 11,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i185960835",
+  "type": "Ride",
+  "start_date_local": "2026-09-12T16:31:41",
+  "distance": 41872.77,
+  "moving_time": 4623,
+  "icu_training_load": 81,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
