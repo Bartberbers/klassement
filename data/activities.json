@@ -8058,5 +8058,31 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i185824827",
+  "type": "Rowing",
+  "start_date_local": "2026-09-12T08:35:56",
+  "distance": 19827.19,
+  "moving_time": 6159,
+  "icu_training_load": 110,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i185759916",
+  "type": "Run",
+  "start_date_local": "2026-09-12T09:45:08",
+  "distance": 3715.17,
+  "moving_time": 1338,
+  "icu_training_load": 19,
+  "source": "GARMIN_CONNECT",
+  "name": "Ko Pha-Ngan Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
