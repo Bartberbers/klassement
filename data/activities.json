@@ -8136,5 +8136,83 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i186222986",
+  "type": "Rowing",
+  "start_date_local": "2026-09-13T11:11:55",
+  "distance": 19873.53,
+  "moving_time": 6071,
+  "icu_training_load": 118,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i186223121",
+  "type": "Rowing",
+  "start_date_local": "2026-09-13T11:12:20",
+  "distance": 19710.87,
+  "moving_time": 5969,
+  "icu_training_load": 115,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i186222897",
+  "type": "Rowing",
+  "start_date_local": "2026-09-13T11:13:28",
+  "distance": 19866.88,
+  "moving_time": 6004,
+  "icu_training_load": 83,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i186262669",
+  "type": "Run",
+  "start_date_local": "2026-09-13T13:33:25",
+  "distance": 16375.34,
+  "moving_time": 4798,
+  "icu_training_load": 90,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Hardlopen",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i186283955",
+  "type": "VirtualRide",
+  "start_date_local": "2026-09-13T14:36:31",
+  "distance": 30040.54,
+  "moving_time": 3664,
+  "icu_training_load": 42,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Cycling",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i186283555",
+  "type": "VirtualRide",
+  "start_date_local": "2026-09-13T14:37:12",
+  "distance": 30063.9,
+  "moving_time": 3622,
+  "icu_training_load": 43,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorcycling",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
