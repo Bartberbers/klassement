@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-09-13T23:12",
+ "generated_at": "2026-09-14T10:45",
  "weeks": [
+  {
+   "label": "Week 37",
+   "sub": "7 – 13 september",
+   "start": "2026-09-07",
+   "end": "2026-09-13",
+   "winner": "Lelijkert Toon",
+   "score": 100.0,
+   "eq_km": 107.3,
+   "margin": 27.7,
+   "runner_up": "Mees"
+  },
   {
    "label": "Week 36",
    "sub": "31 – 6 september",
@@ -298,7 +309,7 @@
   },
   {
    "name": "Lelijkert Toon",
-   "weeks": 8,
+   "weeks": 9,
    "months": 1
   },
   {
