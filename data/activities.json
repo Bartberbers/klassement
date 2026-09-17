@@ -8409,5 +8409,44 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i187554826",
+  "type": "Rowing",
+  "start_date_local": "2026-09-17T09:07:16",
+  "distance": 16487.11,
+  "moving_time": 4442,
+  "icu_training_load": 41,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i187555563",
+  "type": "Rowing",
+  "start_date_local": "2026-09-17T09:07:31",
+  "distance": 16455.67,
+  "moving_time": 4364,
+  "icu_training_load": 40,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i187574177",
+  "type": "Run",
+  "start_date_local": "2026-09-17T16:32:20",
+  "distance": 4005.41,
+  "moving_time": 1203,
+  "icu_training_load": 24,
+  "source": "GARMIN_CONNECT",
+  "name": "Ko Samui Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
