@@ -8643,5 +8643,44 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i188293954",
+  "type": "Rowing",
+  "start_date_local": "2026-09-19T18:19:45",
+  "distance": 2005.15,
+  "moving_time": 1298,
+  "icu_training_load": 25,
+  "source": "GARMIN_CONNECT",
+  "name": "Milan Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i188294340",
+  "type": "Rowing",
+  "start_date_local": "2026-09-19T18:21:12",
+  "distance": 1873.86,
+  "moving_time": 1051,
+  "icu_training_load": 29,
+  "source": "GARMIN_CONNECT",
+  "name": "Milan Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i188294233",
+  "type": "Rowing",
+  "start_date_local": "2026-09-19T18:25:11",
+  "distance": 1675.69,
+  "moving_time": 770,
+  "icu_training_load": 20,
+  "source": "GARMIN_CONNECT",
+  "name": "Milan Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
