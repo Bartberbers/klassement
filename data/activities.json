@@ -8682,5 +8682,18 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i188565572",
+  "type": "WeightTraining",
+  "start_date_local": "2026-09-20T16:07:14",
+  "distance": null,
+  "moving_time": 3940,
+  "icu_training_load": 24,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
