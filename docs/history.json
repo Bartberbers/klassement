@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-09-20T23:16",
+ "generated_at": "2026-09-21T10:48",
  "weeks": [
+  {
+   "label": "Week 38",
+   "sub": "14 – 20 september",
+   "start": "2026-09-14",
+   "end": "2026-09-20",
+   "winner": "Mees",
+   "score": 100.0,
+   "eq_km": 76.6,
+   "margin": 30.5,
+   "runner_up": "Bart"
+  },
   {
    "label": "Week 37",
    "sub": "7 – 13 september",
@@ -304,7 +315,7 @@
  "crowns": [
   {
    "name": "Mees",
-   "weeks": 9,
+   "weeks": 10,
    "months": 4
   },
   {
