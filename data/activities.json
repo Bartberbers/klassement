@@ -8734,5 +8734,44 @@
   "athlete": "Mart",
   "athlete_id": "i419272",
   "manual": false
+ },
+ {
+  "id": "i189290733",
+  "type": "WeightTraining",
+  "start_date_local": "2026-09-22T18:39:59",
+  "distance": null,
+  "moving_time": 3397,
+  "icu_training_load": 21,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i189306749",
+  "type": "Rowing",
+  "start_date_local": "2026-09-22T18:42:15",
+  "distance": 15811.07,
+  "moving_time": 4115,
+  "icu_training_load": 68,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i189306816",
+  "type": "Rowing",
+  "start_date_local": "2026-09-22T18:42:25",
+  "distance": 15796.69,
+  "moving_time": 4122,
+  "icu_training_load": 41,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
