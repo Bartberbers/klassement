@@ -8721,5 +8721,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i189040087",
+  "type": "Run",
+  "start_date_local": "2026-09-22T10:01:42",
+  "distance": 11008.41,
+  "moving_time": 3582,
+  "icu_training_load": 54,
+  "source": "GARMIN_CONNECT",
+  "name": "Melbourne Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
