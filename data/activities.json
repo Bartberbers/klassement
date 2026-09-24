@@ -8827,6 +8827,19 @@
   "manual": false
  },
  {
+  "id": "i189812457",
+  "type": "Rowing",
+  "start_date_local": "2026-09-23T18:31:26",
+  "distance": 15781.99,
+  "moving_time": 4094,
+  "icu_training_load": 59,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
   "id": "i189656180",
   "type": "Workout",
   "start_date_local": "2026-09-23T18:51:24",
@@ -8837,6 +8850,19 @@
   "name": "Cardio",
   "athlete": "Sam",
   "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i189836330",
+  "type": "WeightTraining",
+  "start_date_local": "2026-09-24T17:39:11",
+  "distance": null,
+  "moving_time": 3861,
+  "icu_training_load": 15,
+  "source": "GARMIN_CONNECT",
+  "name": "Kracht",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
   "manual": false
  }
 ]
