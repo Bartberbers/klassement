@@ -8853,6 +8853,45 @@
   "manual": false
  },
  {
+  "id": "i189905517",
+  "type": "Ride",
+  "start_date_local": "2026-09-24T12:36:02",
+  "distance": 42634.63,
+  "moving_time": 4971,
+  "icu_training_load": 78,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i189942035",
+  "type": "Ride",
+  "start_date_local": "2026-09-24T14:44:37",
+  "distance": 40014.22,
+  "moving_time": 4705,
+  "icu_training_load": 49,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i189967865",
+  "type": "VirtualRide",
+  "start_date_local": "2026-09-24T16:40:46",
+  "distance": 30076.56,
+  "moving_time": 3566,
+  "icu_training_load": 45,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Cycling",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
   "id": "i189836330",
   "type": "WeightTraining",
   "start_date_local": "2026-09-24T17:39:11",
