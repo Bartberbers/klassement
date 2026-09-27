@@ -9176,5 +9176,31 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i190756134",
+  "type": "Rowing",
+  "start_date_local": "2026-09-27T08:07:41",
+  "distance": 20033.93,
+  "moving_time": 6232,
+  "icu_training_load": 101,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i190710954",
+  "type": "Run",
+  "start_date_local": "2026-09-27T13:39:30",
+  "distance": 8441.66,
+  "moving_time": 2927,
+  "icu_training_load": 46,
+  "source": "GARMIN_CONNECT",
+  "name": "Melbourne Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
