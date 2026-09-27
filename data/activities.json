@@ -9215,5 +9215,18 @@
   "athlete": "Mart",
   "athlete_id": "i419272",
   "manual": false
+ },
+ {
+  "id": "i190951791",
+  "type": "Ride",
+  "start_date_local": "2026-09-27T18:28:43",
+  "distance": 35446.81,
+  "moving_time": 4595,
+  "icu_training_load": 45,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
