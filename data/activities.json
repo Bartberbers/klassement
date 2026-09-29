@@ -9306,5 +9306,18 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i191475312",
+  "type": "Rowing",
+  "start_date_local": "2026-09-29T10:01:02",
+  "distance": 19792.31,
+  "moving_time": 6090,
+  "icu_training_load": 96,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
