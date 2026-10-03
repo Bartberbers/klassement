@@ -9527,5 +9527,44 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i192869667",
+  "type": "Rowing",
+  "start_date_local": "2026-10-03T08:01:52",
+  "distance": 20287.69,
+  "moving_time": 6313,
+  "icu_training_load": 83,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i192869708",
+  "type": "Rowing",
+  "start_date_local": "2026-10-03T08:02:40",
+  "distance": 20100.02,
+  "moving_time": 6148,
+  "icu_training_load": 78,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i192887023",
+  "type": "TrailRun",
+  "start_date_local": "2026-10-03T09:02:10",
+  "distance": 22153.77,
+  "moving_time": 6372,
+  "icu_training_load": 138,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrechtse Heuvelrug Trail Run",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
