@@ -9644,5 +9644,57 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i193433864",
+  "type": "Ride",
+  "start_date_local": "2026-10-04T14:24:42",
+  "distance": 52698.71,
+  "moving_time": 5928,
+  "icu_training_load": 90,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i193475756",
+  "type": "Ride",
+  "start_date_local": "2026-10-04T15:41:14",
+  "distance": 63649.64,
+  "moving_time": 7622,
+  "icu_training_load": 79,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Fietsen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i193475779",
+  "type": "Ride",
+  "start_date_local": "2026-10-04T16:40:23",
+  "distance": 43244.32,
+  "moving_time": 5326,
+  "icu_training_load": 68,
+  "source": "GARMIN_CONNECT",
+  "name": "Gooise Meren Cycling",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i193478937",
+  "type": "WeightTraining",
+  "start_date_local": "2026-10-04T17:08:16",
+  "distance": null,
+  "moving_time": 3626,
+  "icu_training_load": 30,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
