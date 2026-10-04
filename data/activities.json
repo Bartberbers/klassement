@@ -9605,5 +9605,44 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i193294335",
+  "type": "Rowing",
+  "start_date_local": "2026-10-04T08:03:19",
+  "distance": 19111.77,
+  "moving_time": 5761,
+  "icu_training_load": 76,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i193347450",
+  "type": "Rowing",
+  "start_date_local": "2026-10-04T09:56:51",
+  "distance": 19481.26,
+  "moving_time": 6249,
+  "icu_training_load": 76,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i193345104",
+  "type": "Rowing",
+  "start_date_local": "2026-10-04T10:03:30",
+  "distance": 18416.01,
+  "moving_time": 5818,
+  "icu_training_load": 114,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
