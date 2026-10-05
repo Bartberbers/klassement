@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-10-04T23:58",
+ "generated_at": "2026-10-05T12:20",
  "weeks": [
+  {
+   "label": "Week 40",
+   "sub": "28 – 4 oktober",
+   "start": "2026-09-28",
+   "end": "2026-10-04",
+   "winner": "Mees",
+   "score": 93.7,
+   "eq_km": 113.5,
+   "margin": 0.5,
+   "runner_up": "Lelijkert Toon"
+  },
   {
    "label": "Week 39",
    "sub": "21 – 27 september",
@@ -337,7 +348,7 @@
  "crowns": [
   {
    "name": "Mees",
-   "weeks": 10,
+   "weeks": 11,
    "months": 4
   },
   {

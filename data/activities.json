@@ -9696,5 +9696,18 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i193750768",
+  "type": "Run",
+  "start_date_local": "2026-10-05T10:57:57",
+  "distance": 7040.76,
+  "moving_time": 2152,
+  "icu_training_load": 40,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Hardlopen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
