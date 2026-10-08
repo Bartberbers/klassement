@@ -9854,6 +9854,19 @@
   "manual": false
  },
  {
+  "id": "i195111004",
+  "type": "Ride",
+  "start_date_local": "2026-10-08T15:45:24",
+  "distance": 53230.23,
+  "moving_time": 5657,
+  "icu_training_load": 59,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Fietsen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
   "id": "i194930586",
   "type": "Run",
   "start_date_local": "2026-10-08T16:45:46",
@@ -9864,6 +9877,32 @@
   "name": "Melbourne Hardlopen",
   "athlete": "Mart",
   "athlete_id": "i419272",
+  "manual": false
+ },
+ {
+  "id": "i195164127",
+  "type": "VirtualRow",
+  "start_date_local": "2026-10-08T18:09:11",
+  "distance": null,
+  "moving_time": 5172,
+  "icu_training_load": 67,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i195208807",
+  "type": "WeightTraining",
+  "start_date_local": "2026-10-08T19:59:10",
+  "distance": null,
+  "moving_time": 3298,
+  "icu_training_load": 22,
+  "source": "GARMIN_CONNECT",
+  "name": "Strength",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
   "manual": false
  }
 ]
