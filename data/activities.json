@@ -9904,5 +9904,31 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i195321696",
+  "type": "Rowing",
+  "start_date_local": "2026-10-09T07:06:28",
+  "distance": 16430.38,
+  "moving_time": 4998,
+  "icu_training_load": 55,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i195343175",
+  "type": "Run",
+  "start_date_local": "2026-10-09T09:36:46",
+  "distance": 5018.66,
+  "moving_time": 1724,
+  "icu_training_load": 20,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Hardlopen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
