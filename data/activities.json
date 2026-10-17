@@ -10281,5 +10281,57 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i198275103",
+  "type": "Rowing",
+  "start_date_local": "2026-10-17T11:15:10",
+  "distance": 12035.4,
+  "moving_time": 3822,
+  "icu_training_load": 70,
+  "source": "GARMIN_CONNECT",
+  "name": "Hilversum Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i198268077",
+  "type": "Rowing",
+  "start_date_local": "2026-10-17T11:15:36",
+  "distance": 12178.21,
+  "moving_time": 4133,
+  "icu_training_load": 77,
+  "source": "GARMIN_CONNECT",
+  "name": "Hilversum Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i198272240",
+  "type": "Rowing",
+  "start_date_local": "2026-10-17T11:21:32",
+  "distance": 11525.85,
+  "moving_time": 3457,
+  "icu_training_load": 87,
+  "source": "GARMIN_CONNECT",
+  "name": "Hilversum Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i198378546",
+  "type": "Walk",
+  "start_date_local": "2026-10-17T17:13:09",
+  "distance": 3259.4,
+  "moving_time": 2522,
+  "icu_training_load": 12,
+  "source": "GARMIN_CONNECT",
+  "name": "Hilversum Wandelen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
