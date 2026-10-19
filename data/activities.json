@@ -10398,5 +10398,44 @@
   "athlete": "Mart",
   "athlete_id": "i419272",
   "manual": false
+ },
+ {
+  "id": "i199010230",
+  "type": "Ride",
+  "start_date_local": "2026-10-19T13:20:30",
+  "distance": 35138.72,
+  "moving_time": 4213,
+  "icu_training_load": 35,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i199137379",
+  "type": "WeightTraining",
+  "start_date_local": "2026-10-19T18:10:30",
+  "distance": null,
+  "moving_time": 3724,
+  "icu_training_load": 24,
+  "source": "GARMIN_CONNECT",
+  "name": "Kracht",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i199137803",
+  "type": "WeightTraining",
+  "start_date_local": "2026-10-19T18:20:54",
+  "distance": null,
+  "moving_time": 3142,
+  "icu_training_load": 17,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
