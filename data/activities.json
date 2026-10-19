@@ -10372,5 +10372,31 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i198859777",
+  "type": "WeightTraining",
+  "start_date_local": "2026-10-19T06:53:37",
+  "distance": null,
+  "moving_time": 2193,
+  "icu_training_load": 12,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i198885404",
+  "type": "Hike",
+  "start_date_local": "2026-10-19T10:15:35",
+  "distance": 9590.81,
+  "moving_time": 6858,
+  "icu_training_load": 18,
+  "source": "GARMIN_CONNECT",
+  "name": "Kalbarri National Park Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
