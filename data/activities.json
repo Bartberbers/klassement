@@ -10476,5 +10476,44 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i199984586",
+  "type": "VirtualRide",
+  "start_date_local": "2026-10-21T15:48:10",
+  "distance": null,
+  "moving_time": 313,
+  "icu_training_load": 3,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorcycling",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i200008918",
+  "type": "VirtualRow",
+  "start_date_local": "2026-10-21T16:01:01",
+  "distance": null,
+  "moving_time": 4080,
+  "icu_training_load": 84,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i200075669",
+  "type": "VirtualRow",
+  "start_date_local": "2026-10-21T18:08:49",
+  "distance": null,
+  "moving_time": 4989,
+  "icu_training_load": 72,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
