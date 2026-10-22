@@ -10504,6 +10504,19 @@
   "manual": false
  },
  {
+  "id": "i200166812",
+  "type": "Rowing",
+  "start_date_local": "2026-10-21T16:03:22",
+  "distance": 20056.97,
+  "moving_time": 6241,
+  "icu_training_load": 69,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
   "id": "i200075669",
   "type": "VirtualRow",
   "start_date_local": "2026-10-21T18:08:49",
