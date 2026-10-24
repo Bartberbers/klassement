@@ -10658,5 +10658,31 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i201061379",
+  "type": "Rowing",
+  "start_date_local": "2026-10-24T12:09:27",
+  "distance": 16041.45,
+  "moving_time": 4743,
+  "icu_training_load": 65,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i201068733",
+  "type": "Ride",
+  "start_date_local": "2026-10-24T12:52:47",
+  "distance": 40009.15,
+  "moving_time": 4471,
+  "icu_training_load": 60,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
