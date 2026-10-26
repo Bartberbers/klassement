@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-10-25T23:19",
+ "generated_at": "2026-10-26T11:12",
  "weeks": [
+  {
+   "label": "Week 43",
+   "sub": "19 – 25 oktober",
+   "start": "2026-10-19",
+   "end": "2026-10-25",
+   "winner": "Mees",
+   "score": 93.5,
+   "eq_km": 92.6,
+   "margin": 4.0,
+   "runner_up": "Bart"
+  },
   {
    "label": "Week 42",
    "sub": "12 – 18 oktober",
@@ -275,17 +286,6 @@
    "eq_km": 132.8,
    "margin": 31.8,
    "runner_up": "Mart"
-  },
-  {
-   "label": "Week 17",
-   "sub": "20 – 26 april",
-   "start": "2026-04-20",
-   "end": "2026-04-26",
-   "winner": "Mees",
-   "score": 97.5,
-   "eq_km": 109.8,
-   "margin": 2.8,
-   "runner_up": "Lelijkert Toon"
   }
  ],
  "months": [
