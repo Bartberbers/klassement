@@ -10853,5 +10853,70 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i202742381",
+  "type": "Hike",
+  "start_date_local": "2026-10-28T05:27:23",
+  "distance": 10031.2,
+  "moving_time": 8519,
+  "icu_training_load": 72,
+  "source": "GARMIN_CONNECT",
+  "name": "Karijini Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
+ },
+ {
+  "id": "i202755142",
+  "type": "Rowing",
+  "start_date_local": "2026-10-28T13:11:37",
+  "distance": 13295.5,
+  "moving_time": 4343,
+  "icu_training_load": 70,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i202760273",
+  "type": "Rowing",
+  "start_date_local": "2026-10-28T13:13:11",
+  "distance": 13256.94,
+  "moving_time": 4163,
+  "icu_training_load": 71,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i202821455",
+  "type": "Rowing",
+  "start_date_local": "2026-10-28T15:34:45",
+  "distance": 12123.29,
+  "moving_time": 3850,
+  "icu_training_load": 48,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i202874409",
+  "type": "Run",
+  "start_date_local": "2026-10-28T18:20:09",
+  "distance": 5904.25,
+  "moving_time": 2043,
+  "icu_training_load": 27,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Hardlopen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
