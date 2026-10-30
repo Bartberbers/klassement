@@ -10933,6 +10933,19 @@
   "manual": false
  },
  {
+  "id": "i203560066",
+  "type": "Rowing",
+  "start_date_local": "2026-10-29T07:01:47",
+  "distance": 15440.63,
+  "moving_time": 4687,
+  "icu_training_load": 66,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
   "id": "i203032409",
   "type": "Rowing",
   "start_date_local": "2026-10-29T07:03:52",
@@ -10956,6 +10969,45 @@
   "name": "Cardio",
   "athlete": "Sam",
   "athlete_id": "i677840",
+  "manual": false
+ },
+ {
+  "id": "i203560104",
+  "type": "Rowing",
+  "start_date_local": "2026-10-30T11:38:19",
+  "distance": 7143.06,
+  "moving_time": 2207,
+  "icu_training_load": 34,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i203527331",
+  "type": "Rowing",
+  "start_date_local": "2026-10-30T11:38:40",
+  "distance": 7094.86,
+  "moving_time": 2135,
+  "icu_training_load": 29,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i203618481",
+  "type": "Ride",
+  "start_date_local": "2026-10-30T15:20:42",
+  "distance": 61932.18,
+  "moving_time": 7173,
+  "icu_training_load": 87,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
   "manual": false
  }
 ]
