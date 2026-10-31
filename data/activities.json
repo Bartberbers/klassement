@@ -11009,5 +11009,18 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i203825260",
+  "type": "Run",
+  "start_date_local": "2026-10-31T09:25:21",
+  "distance": 5020.83,
+  "moving_time": 1523,
+  "icu_training_load": 27,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Hardlopen",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
