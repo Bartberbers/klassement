@@ -11022,5 +11022,70 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i203914147",
+  "type": "Rowing",
+  "start_date_local": "2026-10-31T10:17:22",
+  "distance": 20657.51,
+  "moving_time": 6727,
+  "icu_training_load": 98,
+  "source": "GARMIN_CONNECT",
+  "name": "Amstelveen Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i203922682",
+  "type": "Rowing",
+  "start_date_local": "2026-10-31T10:19:52",
+  "distance": 20382.48,
+  "moving_time": 6571,
+  "icu_training_load": 118,
+  "source": "GARMIN_CONNECT",
+  "name": "Amstelveen Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i204020834",
+  "type": "Rowing",
+  "start_date_local": "2026-10-31T16:22:15",
+  "distance": 7919.04,
+  "moving_time": 2328,
+  "icu_training_load": 29,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i204022745",
+  "type": "Rowing",
+  "start_date_local": "2026-10-31T16:22:16",
+  "distance": 7907.6,
+  "moving_time": 2313,
+  "icu_training_load": 27,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i204020687",
+  "type": "Rowing",
+  "start_date_local": "2026-10-31T16:23:17",
+  "distance": 7848.86,
+  "moving_time": 2276,
+  "icu_training_load": 25,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
