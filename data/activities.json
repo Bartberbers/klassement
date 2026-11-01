@@ -11087,5 +11087,44 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i204427937",
+  "type": "Rowing",
+  "start_date_local": "2026-11-01T15:14:36",
+  "distance": 11736.01,
+  "moving_time": 3500,
+  "icu_training_load": 63,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i204428157",
+  "type": "Rowing",
+  "start_date_local": "2026-11-01T15:14:47",
+  "distance": 11746.44,
+  "moving_time": 3480,
+  "icu_training_load": 53,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i204427910",
+  "type": "Rowing",
+  "start_date_local": "2026-11-01T15:14:48",
+  "distance": 11767.59,
+  "moving_time": 3436,
+  "icu_training_load": 50,
+  "source": "GARMIN_CONNECT",
+  "name": "Amsterdam Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
