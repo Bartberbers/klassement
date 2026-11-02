@@ -11126,5 +11126,44 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i204631845",
+  "type": "Hike",
+  "start_date_local": "2026-11-02T09:09:46",
+  "distance": 14738.72,
+  "moving_time": 9931,
+  "icu_training_load": 25,
+  "source": "GARMIN_CONNECT",
+  "name": "Margaret River Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
+ },
+ {
+  "id": "i204735965",
+  "type": "Ride",
+  "start_date_local": "2026-11-02T11:16:27",
+  "distance": 35607.92,
+  "moving_time": 4248,
+  "icu_training_load": 58,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i204734423",
+  "type": "Ride",
+  "start_date_local": "2026-11-02T11:25:00",
+  "distance": 34338.29,
+  "moving_time": 4066,
+  "icu_training_load": 61,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Wegwielrennen",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
