@@ -11217,5 +11217,18 @@
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
   "manual": false
+ },
+ {
+  "id": "i205421552",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-03T17:02:44",
+  "distance": 28892.26,
+  "moving_time": 3344,
+  "icu_training_load": 30,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Cycling",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
  }
 ]
