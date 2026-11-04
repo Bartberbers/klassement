@@ -11230,5 +11230,18 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i205503784",
+  "type": "Hike",
+  "start_date_local": "2026-11-04T09:18:00",
+  "distance": 9857.42,
+  "moving_time": 7550,
+  "icu_training_load": 44,
+  "source": "GARMIN_CONNECT",
+  "name": "Mount Romance Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
