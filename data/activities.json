@@ -11308,5 +11308,31 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i206003162",
+  "type": "Rowing",
+  "start_date_local": "2026-11-05T07:04:48",
+  "distance": 15936.82,
+  "moving_time": 4832,
+  "icu_training_load": 56,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i206012182",
+  "type": "Hike",
+  "start_date_local": "2026-11-05T13:32:23",
+  "distance": 4565.84,
+  "moving_time": 3761,
+  "icu_training_load": 19,
+  "source": "GARMIN_CONNECT",
+  "name": "Torndirrup Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
