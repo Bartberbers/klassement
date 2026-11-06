@@ -11347,5 +11347,18 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i206426300",
+  "type": "Hike",
+  "start_date_local": "2026-11-06T09:33:54",
+  "distance": 14056.17,
+  "moving_time": 11605,
+  "icu_training_load": 62,
+  "source": "GARMIN_CONNECT",
+  "name": "Torndirrup Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
