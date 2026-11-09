@@ -11503,5 +11503,31 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i207704723",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-09T09:14:41",
+  "distance": null,
+  "moving_time": 4310,
+  "icu_training_load": 15,
+  "source": "GARMIN_CONNECT",
+  "name": "Kracht",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i207677665",
+  "type": "Hike",
+  "start_date_local": "2026-11-09T14:16:16",
+  "distance": 2584.33,
+  "moving_time": 2337,
+  "icu_training_load": 15,
+  "source": "GARMIN_CONNECT",
+  "name": "Cape le Grand Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
