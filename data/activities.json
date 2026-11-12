@@ -11627,7 +11627,7 @@
   "start_date_local": "2026-11-11T17:59:12",
   "distance": null,
   "moving_time": 4130,
-  "icu_training_load": 40,
+  "icu_training_load": 75,
   "source": "GARMIN_CONNECT",
   "name": "Indoor Rowing",
   "athlete": "Bart",
