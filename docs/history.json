@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-11-15T19:23",
+ "generated_at": "2026-11-16T01:05",
  "weeks": [
+  {
+   "label": "Week 46",
+   "sub": "9 – 15 november",
+   "start": "2026-11-09",
+   "end": "2026-11-15",
+   "winner": "Mees",
+   "score": 100.0,
+   "eq_km": 72.9,
+   "margin": 6.2,
+   "runner_up": "Lelijkert Toon"
+  },
   {
    "label": "Week 45",
    "sub": "2 – 8 november",
@@ -275,17 +286,6 @@
    "eq_km": 147.3,
    "margin": 22.7,
    "runner_up": "Mees"
-  },
-  {
-   "label": "Week 20",
-   "sub": "11 – 17 mei",
-   "start": "2026-05-11",
-   "end": "2026-05-17",
-   "winner": "Mees",
-   "score": 100.0,
-   "eq_km": 128.2,
-   "margin": 21.2,
-   "runner_up": "Mart"
   }
  ],
  "months": [
