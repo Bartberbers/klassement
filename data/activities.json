@@ -11880,5 +11880,70 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i210780986",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-16T13:53:56",
+  "distance": 47342.89,
+  "moving_time": 5423,
+  "icu_training_load": 57,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorcycling",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i210806911",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-16T15:06:08",
+  "distance": 30060.0,
+  "moving_time": 3444,
+  "icu_training_load": 28,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorcycling",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i210831847",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-16T16:03:11",
+  "distance": null,
+  "moving_time": 4376,
+  "icu_training_load": 36,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i210854534",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-16T16:43:57",
+  "distance": 46688.6,
+  "moving_time": 5405,
+  "icu_training_load": 49,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Cycling",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i210979181",
+  "type": "Run",
+  "start_date_local": "2026-11-17T08:45:10",
+  "distance": 3392.68,
+  "moving_time": 1237,
+  "icu_training_load": 17,
+  "source": "GARMIN_CONNECT",
+  "name": "Sydney Hardlopen",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
