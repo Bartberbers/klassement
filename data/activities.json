@@ -11984,5 +11984,18 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i211659111",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-18T13:27:24",
+  "distance": 31824.46,
+  "moving_time": 3610,
+  "icu_training_load": 29,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorcycling",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
