@@ -12140,5 +12140,31 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i213146914",
+  "type": "Rowing",
+  "start_date_local": "2026-11-22T09:38:17",
+  "distance": 19915.71,
+  "moving_time": 6341,
+  "icu_training_load": 82,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i213119510",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-22T09:51:23",
+  "distance": null,
+  "moving_time": 3243,
+  "icu_training_load": 25,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
