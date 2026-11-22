@@ -12166,5 +12166,31 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i213278026",
+  "type": "Rowing",
+  "start_date_local": "2026-11-22T13:30:16",
+  "distance": 23231.86,
+  "moving_time": 7508,
+  "icu_training_load": 111,
+  "source": "GARMIN_CONNECT",
+  "name": "Groningen Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i213277577",
+  "type": "Rowing",
+  "start_date_local": "2026-11-22T13:31:43",
+  "distance": 22328.64,
+  "moving_time": 7273,
+  "icu_training_load": 142,
+  "source": "GARMIN_CONNECT",
+  "name": "Groningen Roeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
  }
 ]
