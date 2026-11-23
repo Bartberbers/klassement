@@ -1,6 +1,17 @@
 {
- "generated_at": "2026-11-22T22:29",
+ "generated_at": "2026-11-23T16:06",
  "weeks": [
+  {
+   "label": "Week 47",
+   "sub": "16 – 22 november",
+   "start": "2026-11-16",
+   "end": "2026-11-22",
+   "winner": "Bart",
+   "score": 89.8,
+   "eq_km": 102.2,
+   "margin": 1.4,
+   "runner_up": "Lelijkert Toon"
+  },
   {
    "label": "Week 46",
    "sub": "9 – 15 november",
@@ -275,17 +286,6 @@
    "eq_km": 86.2,
    "margin": 9.6,
    "runner_up": "Bart"
-  },
-  {
-   "label": "Week 21",
-   "sub": "18 – 24 mei",
-   "start": "2026-05-18",
-   "end": "2026-05-24",
-   "winner": "Lelijkert Toon",
-   "score": 100.0,
-   "eq_km": 147.3,
-   "margin": 22.7,
-   "runner_up": "Mees"
   }
  ],
  "months": [
@@ -375,12 +375,17 @@
   },
   {
    "name": "Lelijkert Toon",
-   "weeks": 13,
+   "weeks": 12,
    "months": 3
   },
   {
    "name": "Mart",
    "weeks": 3,
+   "months": 0
+  },
+  {
+   "name": "Bart",
+   "weeks": 1,
    "months": 0
   }
  ]
