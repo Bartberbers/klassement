@@ -12231,5 +12231,18 @@
   "athlete": "Bart",
   "athlete_id": "i429839",
   "manual": false
+ },
+ {
+  "id": "i214047767",
+  "type": "Hike",
+  "start_date_local": "2026-11-24T13:23:04",
+  "distance": 4439.6,
+  "moving_time": 2871,
+  "icu_training_load": 8,
+  "source": "GARMIN_CONNECT",
+  "name": "Sunshine Coast Hiken",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
  }
 ]
