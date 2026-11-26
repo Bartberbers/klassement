@@ -12309,5 +12309,44 @@
   "athlete": "Sam",
   "athlete_id": "i677840",
   "manual": false
+ },
+ {
+  "id": "i214826602",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-26T08:11:35",
+  "distance": null,
+  "moving_time": 5156,
+  "icu_training_load": 70,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i214864279",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-26T10:05:16",
+  "distance": null,
+  "moving_time": 3268,
+  "icu_training_load": 24,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i214966595",
+  "type": "Rowing",
+  "start_date_local": "2026-11-26T14:00:47",
+  "distance": 20001.32,
+  "moving_time": 5846,
+  "icu_training_load": 65,
+  "source": "GARMIN_CONNECT",
+  "name": "Utrecht Roeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
