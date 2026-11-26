@@ -12257,5 +12257,57 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i214533321",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-25T13:32:33",
+  "distance": null,
+  "moving_time": 4779,
+  "icu_training_load": 80,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i214584851",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-25T15:57:44",
+  "distance": null,
+  "moving_time": 5450,
+  "icu_training_load": 107,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i214583602",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-25T15:58:48",
+  "distance": null,
+  "moving_time": 5231,
+  "icu_training_load": 76,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i214607121",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-25T17:49:51",
+  "distance": null,
+  "moving_time": 1721,
+  "icu_training_load": 9,
+  "source": "GARMIN_CONNECT",
+  "name": "Krachtsport",
+  "athlete": "Sam",
+  "athlete_id": "i677840",
+  "manual": false
  }
 ]
