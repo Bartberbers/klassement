@@ -12387,5 +12387,31 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i215219120",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-27T07:25:10",
+  "distance": null,
+  "moving_time": 5802,
+  "icu_training_load": 61,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i215359820",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-27T14:18:34",
+  "distance": null,
+  "moving_time": 5097,
+  "icu_training_load": 65,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
