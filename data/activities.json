@@ -12348,5 +12348,44 @@
   "athlete": "Mees",
   "athlete_id": "i418005",
   "manual": false
+ },
+ {
+  "id": "i214997132",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-26T15:46:51",
+  "distance": null,
+  "moving_time": 5010,
+  "icu_training_load": 58,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i215029202",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-26T17:19:44",
+  "distance": null,
+  "moving_time": 4588,
+  "icu_training_load": 17,
+  "source": "GARMIN_CONNECT",
+  "name": "Strength",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i215029206",
+  "type": "WeightTraining",
+  "start_date_local": "2026-11-26T17:42:26",
+  "distance": null,
+  "moving_time": 3871,
+  "icu_training_load": 19,
+  "source": "GARMIN_CONNECT",
+  "name": "Kracht",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
  }
 ]
