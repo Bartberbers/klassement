@@ -12402,6 +12402,19 @@
   "manual": false
  },
  {
+  "id": "i215543393",
+  "type": "OpenWaterSwim",
+  "start_date_local": "2026-11-27T08:26:58",
+  "distance": 704.95,
+  "moving_time": 3211,
+  "icu_training_load": 8,
+  "source": "GARMIN_CONNECT",
+  "name": "Whitsundays Zwemmen in open water",
+  "athlete": "Mart",
+  "athlete_id": "i419272",
+  "manual": false
+ },
+ {
   "id": "i215359820",
   "type": "VirtualRow",
   "start_date_local": "2026-11-27T14:18:34",
@@ -12425,6 +12438,71 @@
   "name": "Indoorroeien",
   "athlete": "Lelijkert Toon",
   "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i215588754",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-28T08:18:48",
+  "distance": null,
+  "moving_time": 5280,
+  "icu_training_load": 73,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Mees",
+  "athlete_id": "i418005",
+  "manual": false
+ },
+ {
+  "id": "i215618557",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-28T10:02:47",
+  "distance": null,
+  "moving_time": 4401,
+  "icu_training_load": 80,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Rowing",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
+  "manual": false
+ },
+ {
+  "id": "i215618060",
+  "type": "VirtualRow",
+  "start_date_local": "2026-11-28T10:08:12",
+  "distance": null,
+  "moving_time": 4016,
+  "icu_training_load": 72,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorroeien",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i215678779",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-28T12:40:10",
+  "distance": 29054.17,
+  "moving_time": 3417,
+  "icu_training_load": 40,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoorcycling",
+  "athlete": "Lelijkert Toon",
+  "athlete_id": "i418023",
+  "manual": false
+ },
+ {
+  "id": "i215678704",
+  "type": "VirtualRide",
+  "start_date_local": "2026-11-28T12:40:33",
+  "distance": null,
+  "moving_time": 3643,
+  "icu_training_load": 36,
+  "source": "GARMIN_CONNECT",
+  "name": "Indoor Cycling",
+  "athlete": "Bart",
+  "athlete_id": "i429839",
   "manual": false
  }
 ]
